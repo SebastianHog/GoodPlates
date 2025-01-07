@@ -1,0 +1,43 @@
+@forward '../../style/main.scss';
+@use '../../style/main.scss' as *;
+
+.navButtonsContainer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 79vw;
+  z-index: 10;
+  button {
+    all: unset;
+    font-size: 3rem;
+
+    &:hover {
+      color: rgb(37, 37, 37);
+      cursor: pointer;
+    }
+  }
+}
+
+.carousel {
+  width: 80vw;
+  height: 30vh;
+  border: 0.2rem solid black;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 1rem;
+  padding-left: 0.7rem;
+
+  .carousel-item {
+    transition-duration: 0.2s;
+    height: 95%;
+    border: 0.2rem solid black;
+    width: 35rem;
+    flex-shrink: 0;
+    padding: 0.2rem;
+    .recipe-author {
+      font-size: 1rem;
+    }
+  }
+}

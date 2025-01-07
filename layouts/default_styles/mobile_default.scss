@@ -1,0 +1,29 @@
+@use "../../style/main.scss" as *;
+@forward "../../style/_variables.scss";
+
+@media (max-width: $size-sm){
+  .default-layout-container{
+    flex-direction: column;
+    .sidebar{
+      width: 100%;
+      height: 10vh;
+      .logoTitleImage{
+        margin-left: 2rem;
+        margin-top: .2rem ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .logo-img{
+          width: 5rem;
+          height: 5rem;
+          margin: 0;
+        }
+        .logoTitle{
+          display: none;
+
+        }
+      }
+    }
+  }
+}

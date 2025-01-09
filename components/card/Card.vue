@@ -14,7 +14,10 @@
       </div>
     </div>
     <div class="recipe-info">
-      <h2>Written by <NuxtLink></NuxtLink></h2>
+      <h2>
+        Written by
+        <NuxtLink :to="`user/${item.author}`">{{ item.author }}</NuxtLink>
+      </h2>
     </div>
   </div>
 </template>

@@ -13,6 +13,9 @@
         />
       </div>
     </div>
+    <div class="recipe-info">
+      <h2>Written by <NuxtLink></NuxtLink></h2>
+    </div>
   </div>
 </template>
 

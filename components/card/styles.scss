@@ -1,0 +1,39 @@
+@forward '../../style/main.scss';
+@use '../../style/main.scss' as *;
+
+.card {
+  transition-duration: 0.5s;
+  height: 26.625rem;
+  width: 17.125rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  .recipe-thumbnail {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .recipe-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+
+    .recipe-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 0.5rem;
+      width: 80%;
+    }
+    .bookmark-icon {
+      width: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.bookmarked {
+  fill: gold;
+}

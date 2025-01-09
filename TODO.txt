@@ -1,0 +1,1 @@
+1. Carousel customizable title of the Carousel

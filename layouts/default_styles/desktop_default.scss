@@ -2,38 +2,46 @@
 @use '../../style/main.scss' as *;
 
 .default-layout-container {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-}
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
 
-.sidebar {
-  background: rgba(0, 0, 0, 0.03);
-  width: 15rem;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-direction: column;
+    .sidebar {
+        background: rgba(0, 0, 0, 0.03);
+        width: 15rem;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: column;
 
-  .logoTitleImage {
-    .logo-img {
-      margin-top: 2rem;
-      width: 10rem;
-      height: 10rem;
+        .logoTitleImage {
+            .logo-img {
+                margin-top: 2rem;
+                width: 10rem;
+                height: 10rem;
+            }
+
+            .logoTitle {
+                font-weight: bolder;
+                color: $primary_text_color;
+                font-size: 2.6rem;
+                letter-spacing: -2px;
+                -webkit-text-stroke: 1px black;
+            }
+        }
+        .seperator {
+            width: 100%;
+            height: 0.2rem;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
     }
 
-    .logoTitle {
-      font-weight: bolder;
-      color: $primary_text_color;
-      font-size: 2.6rem;
-      letter-spacing: -2px;
-      -webkit-text-stroke: 1px black;
+    .header {
+        width: 100%;
+        height: 5rem;
+        background-color: rgba(0, 0, 0, 0.03);
+        margin-bottom: 1rem;
+        margin-right: 0;
     }
-  }
-  .seperator {
-    width: 100%;
-    height: 0.2rem;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
 }

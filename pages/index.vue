@@ -1,6 +1,6 @@
 <template>
   <div class="carousels-container">
-    <Carousel :items="freshRecipes" />
+    <Carousel :items="freshRecipes" label="There are no recent uploads" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
           title: 'Chicken Parmesan',
           author: 'Steve',
           description:
-            'While developing this recipe, I wondered: Why are we, citizens of the world, so obsessed with chicken Parmesan? After discussing with the food team, testing multiple variations, and summoning various Italian (-American) gods, I realized the reason is simple.',
+            'While developing this recipe, I wondered: Why are we, citizens of the world, so obsessed with chicken Parmesan?',
           thumbnail:
             'https://assets.bonappetit.com/photos/5ea8f0df16738800085ad5d2/1:1/w_2560%2Cc_limit/Chicken-Parmesean-Recipe-Lede.jpg',
         },

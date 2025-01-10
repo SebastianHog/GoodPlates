@@ -7,12 +7,14 @@
   justify-content: space-between;
   width: 79vw;
   z-index: 10;
+  height: 26.625rem;
   button {
     all: unset;
     font-size: 3rem;
+    width: 3rem;
+    transition-duration: 0.3s;
 
     &:hover {
-      color: rgb(37, 37, 37);
       cursor: pointer;
     }
   }
@@ -21,6 +23,7 @@
 .carousel {
   margin-left: 2rem;
   width: 80vw;
+  height: 26.625rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;

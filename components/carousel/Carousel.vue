@@ -11,7 +11,7 @@
         :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
       />
     </div>
-    <Label v-else :centered="true">You haven't cooked anything yet... </Label>
+    <Label v-else :centered="true">{{ label }} </Label>
   </div>
 </template>
 
@@ -24,6 +24,10 @@ export default defineComponent({
     items: {
       type: Array as () => IRecipe[],
       required: true,
+    },
+    label: {
+      type: String,
+      required: false,
     },
   },
   data() {

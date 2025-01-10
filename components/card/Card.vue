@@ -1,7 +1,6 @@
 <template>
   <div class="card">
     <img :src="item.thumbnail" alt="food-thumbnail" class="recipe-thumbnail" />
-
     <div class="recipe-header">
       <h1 class="recipe-title">{{ item.title }}</h1>
       <div @click="bookmarkRecipe">
@@ -16,8 +15,20 @@
     <div class="recipe-info">
       <h2>
         Written by
-        <NuxtLink :to="`user/${item.author}`">{{ item.author }}</NuxtLink>
+        <NuxtLink :to="`user/${item.author}`" class="user-link">{{
+          item.author
+        }}</NuxtLink>
       </h2>
+      <h2>43 people have cooked this</h2>
+      <h2>93% of them cooked it again</h2>
+    </div>
+    <div class="hr-container">
+      <hr class="horizontal-rule" />
+    </div>
+    <div class="desc-container">
+      <p>
+        {{ item.description }}
+      </p>
     </div>
   </div>
 </template>

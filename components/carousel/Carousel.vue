@@ -1,17 +1,16 @@
 <template>
   <div class="carousel" ref="carousel">
-    <div class="navButtonsContainer">
-      <button @click="carouselLeft()">&#11164;</button>
-      <button @click="carouselRight()">&#11166;</button>
-    </div>
+    <button @click="carouselLeft()">&#11164;</button>
     <div v-if="items" class="carousel-items-container">
       <Card
         v-for="item in items"
         :item="item"
         :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
+        :key="item.post_id"
       />
     </div>
     <Label v-else :centered="true">{{ label }} </Label>
+    <button @click="carouselRight()">&#11166;</button>
   </div>
 </template>
 

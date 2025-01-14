@@ -6,4 +6,14 @@
   align-items: center;
   justify-content: end;
   gap: 2rem;
+
+  .add-recipe-btn {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    box-shadow: 0.1rem 1px;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
 }

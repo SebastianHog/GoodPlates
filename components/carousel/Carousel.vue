@@ -55,9 +55,6 @@ export default defineComponent({
         this.currentIndex -= this.scrollSpeed;
       }
     },
-    handleClick() {
-      console.log('emit success');
-    },
   },
 });
 </script>

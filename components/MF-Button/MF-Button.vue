@@ -1,23 +1,29 @@
 <template>
-  <button :class="(buttonSize, butttonFontSize)">
+  <button :class="[size, buttonFontSize]" @click="$emit('clicked')">
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IButtonSize } from './buttonType';
+import { Isize, IButtonFontSize } from './buttonType';
 
 export default defineComponent({
   props: {
-    buttonSize: {
-      type: String as () => IButtonSize,
+    size: {
+      type: String as () => Isize,
       required: false,
-      default: 's',
+      default: 'm',
     },
-    butttonFontSize: {
+    buttonFontSize: {
       type: String as () => IButtonFontSize,
+      required: false,
     },
+  },
+  data() {
+    return {
+      btnsz: this.size,
+    };
   },
 });
 </script>

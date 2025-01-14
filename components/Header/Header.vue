@@ -1,6 +1,6 @@
 <template>
   <header class="header-main">
-    <MF-Button buttonSize="l">Add Recipe</MF-Button>
+    <MF-Button size="s" class="add-recipe-btn">Add Recipe</MF-Button>
     <UserIcon />
   </header>
 </template>

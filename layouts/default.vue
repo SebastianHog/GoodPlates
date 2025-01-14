@@ -14,12 +14,10 @@
       </div>
     </div>
     <div style="flex: 1">
-      <header class="header">
-        <UserIcon />
-      </header>
+      <Header />
       <Nuxt />
     </div>
   </div>
 </template>
 
-<style src="./default_styles.scss" lang="scss"></style>
+<style scoped src="./default_styles.scss" lang="scss"></style>

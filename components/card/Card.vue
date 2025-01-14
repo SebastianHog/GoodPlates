@@ -58,4 +58,4 @@ export default defineComponent({
 });
 </script>
 
-<style src="./styles.scss" lang="ts"></style>
+<style scoped src="./styles.scss" lang="ts"></style>

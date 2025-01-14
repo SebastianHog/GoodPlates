@@ -17,7 +17,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .label {
   width: 100%;
   text-decoration: underline;

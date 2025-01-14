@@ -116,7 +116,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .carousels-container {
   display: flex;
   flex-direction: column;

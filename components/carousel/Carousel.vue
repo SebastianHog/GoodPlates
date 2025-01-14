@@ -62,4 +62,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" src="./styles.scss"></style>
+<style scoped lang="scss" src="./styles.scss"></style>

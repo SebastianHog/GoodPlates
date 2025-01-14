@@ -1,6 +1,15 @@
 <template>
   <div class="carousels-container">
-    <Carousel :items="freshRecipes" label="There are no recent uploads" />
+    <Carousel
+      :items="freshRecipes"
+      emptyLabel="There are no recent uploads"
+      carouselLabel="Fresh out of the oven"
+    />
+    <Carousel
+      :items="popularRecipes"
+      carouselLabel="Popular this week"
+      emptyLabel="There doesn't seem to be anything here..."
+    />
   </div>
 </template>
 

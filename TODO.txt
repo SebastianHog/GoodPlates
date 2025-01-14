@@ -1,1 +1,15 @@
-1. Carousel customizable title of the Carousel
+1. Carousel customizable title of the Carousel    ✅
+  - Fix width
+2. Header
+  - Profile icon                                  ✅
+  - Profile dropdown                              ✅
+    - Options
+      - Profile                                   ✅
+      - My recipes                                ✅
+      - Saved                                     ✅
+      - Settings                                  ✅
+3. Sidebar
+4. Pages
+  - Profile
+  - Recipe
+  - Schedule

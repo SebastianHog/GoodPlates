@@ -1,16 +1,19 @@
 <template>
-  <div class="carousel" ref="carousel">
-    <button @click="carouselLeft()">&#11164;</button>
-    <div v-if="items" class="carousel-items-container">
-      <Card
-        v-for="item in items"
-        :item="item"
-        :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
-        :key="item.post_id"
-      />
+  <div class="carousel-container">
+    <h1 class="carousel-label">{{ carouselLabel }}</h1>
+    <div class="carousel" ref="carousel">
+      <button @click="carouselLeft()">&#11164;</button>
+      <div v-if="items" class="carousel-items-container">
+        <Card
+          v-for="item in items"
+          :item="item"
+          :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
+          :key="item.post_id"
+        />
+      </div>
+      <Label v-else :centered="true">{{ emptyLabel }} </Label>
+      <button @click="carouselRight()">&#11166;</button>
     </div>
-    <Label v-else :centered="true">{{ label }} </Label>
-    <button @click="carouselRight()">&#11166;</button>
   </div>
 </template>
 
@@ -24,7 +27,11 @@ export default defineComponent({
       type: Array as () => IRecipe[],
       required: true,
     },
-    label: {
+    emptyLabel: {
+      type: String,
+      required: false,
+    },
+    carouselLabel: {
       type: String,
       required: false,
     },

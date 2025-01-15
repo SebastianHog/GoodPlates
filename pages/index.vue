@@ -1,10 +1,13 @@
 <template>
   <div class="carousels-container">
+    <button @click="handleAddRecipe">Add recipe</button>
     <Carousel :items="freshRecipes" label="There are no recent uploads" />
   </div>
 </template>
 
 <script>
+import { addRecipe } from '~/utils/api/addRecipes';
+
 export default {
   data: () => {
     return {
@@ -104,6 +107,16 @@ export default {
       ],
     };
   },
+  methods: {
+    async handleAddRecipe() {
+      try {
+        const response = await addRecipe();
+        console.log('Added recipe', response)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
 };
 </script>
 

@@ -2,8 +2,8 @@
   <div class="carousels-container">
     <Carousel
       :items="freshRecipes"
-      emptyLabel="There are no recent uploads"
-      carouselLabel="Fresh out of the oven"
+      empty-label="There are no recent uploads"
+      carousel-label="Fresh out of the oven"
     />
     <Carousel
       :items="popularRecipes"

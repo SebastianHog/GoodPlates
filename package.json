@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:prettier": "prettier --check .",
-    "lint": "npm run lint:prettier",
+    "lint": "eslint --ext .js,.ts,.vue .",
     "lintfix": "prettier --write --list-different ."
   },
   "dependencies": {
@@ -21,7 +21,12 @@
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
     "prettier": "^2.7.1",
     "sass": "^1.83.1",
     "sass-loader": "^10.5.2"

@@ -1,8 +1,5 @@
-export type Isize = 'xs' | 's' | 'm' | 'l' | 'xl';
+type Isize = 'xs' | 's' | 'm' | 'l' | 'xl';
 
-export type IButtonFontSize =
-  | 'font-xs'
-  | 'font-s'
-  | 'font-m'
-  | 'font-l'
-  | 'font-xl';
+type IButtonFontSize = 'font-xs' | 'font-s' | 'font-m' | 'font-l' | 'font-xl';
+
+export { Isize, IButtonFontSize };

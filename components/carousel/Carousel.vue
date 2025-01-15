@@ -6,9 +6,9 @@
       <div v-if="items" class="carousel-items-container">
         <Card
           v-for="item in items"
-          :key="item.post_id"
-          :item="item"
           :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
+          :item="item"
+          :key="item.post_id"
         />
       </div>
       <Label v-else :centered="true">{{ emptyLabel }} </Label>

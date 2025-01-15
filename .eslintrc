@@ -1,6 +1,27 @@
 {
   "extends": ["@nuxtjs/eslint-config-typescript"],
   "rules": {
+    "vue/attributes-order": [
+      "warn",
+      {
+        "order": [
+          "CONDITIONALS",
+          "LIST_RENDERING",
+          "RENDER_MODIFIERS",
+          "TWO_WAY_BINDING",
+          ["UNIQUE", "SLOT"],
+          "OTHER_ATTR",
+          "OTHER_DIRECTIVES",
+          "CONTENT",
+          "EVENTS",
+          "DEFINITION",
+          "UNIQUE",
+          "GLOBAL"
+        ],
+        "alphabetical": false
+      }
+    ],
+    "vue/html-self-closing": ["off"],
     "no-console": "off", // Warn on console.log usage
     "no-debugger": "error", // Disallow debugger statements
     "semi": ["error", "always"], // Enforce semicolons at the end of statements
@@ -25,20 +46,5 @@
     "comma-dangle": ["error", "always-multiline"],
     "vue/multi-word-component-names": "off",
     "space-before-function-paren": "off"
-  },
-  "vue/attribute-order": [
-    "warn",
-    {
-      "order": [
-        "GLOBAL_ATTRIBUTES",
-        "LIST_RENDERING",
-        "CONDITIONALS",
-        "DEFINITION",
-        "RENDER_MODIFIERS",
-        "CONTENT",
-        "EVENTS",
-        "OTHER_ATTR"
-      ]
-    }
-  ]
+  }
 }

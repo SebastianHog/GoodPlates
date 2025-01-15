@@ -18,6 +18,7 @@ export default defineComponent({
     buttonFontSize: {
       type: String as () => IButtonFontSize,
       required: false,
+      default: 'm',
     },
   },
   data() {

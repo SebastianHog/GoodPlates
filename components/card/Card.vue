@@ -15,9 +15,9 @@
     <div class="recipe-info">
       <h2>
         Written by
-        <NuxtLink :to="`user/${item.author}`" class="user-link">{{
-          item.author
-        }}</NuxtLink>
+        <NuxtLink :to="`user/${item.author}`" class="user-link">
+          {{ item.author }}
+        </NuxtLink>
       </h2>
       <h2>43 people have cooked this</h2>
       <h2>93% of them cooked it again</h2>

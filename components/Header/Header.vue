@@ -1,8 +1,10 @@
 <template>
   <header class="header-main">
-    <MF-Button size="s" class="add-recipe-btn">Add Recipe</MF-Button>
+    <NuxtLink to="/create_recipe">
+      <MF-Button size="s" class="add-recipe-btn">Add Recipe</MF-Button>
+    </NuxtLink>
     <UserIcon />
   </header>
 </template>
 
-<style scoped src="./styles.scss" lang="scss"></style>
+<style src="./styles.scss" lang="scss"></style>

@@ -1,19 +1,18 @@
-import { IRecipe } from '../../types/recipe';
 import axios from 'axios';
+// import { IRecipe } from '../../types/recipe';
 import 'dotenv/config';
 
-const base_url: string | undefined = process.env.BASE_URL;
+const baseUrl: string | undefined = process.env.BASE_URL;
 
-export const addRecipe = async (recipe: IRecipe) => {
-  console.log('Adding recipe');
-  console.log('base_url: ', base_url);
+export const addRecipe = async () => {
+  await console.log('Adding recipe');
   try {
-    // const res = await axios.post(`${base_url}/recipes/add`, {
-    //   title: 'Iskender',
-    //   description: 'I am eating this tomorrow!',
-    //   creator: 'me',
-    // });
-    // console.log('response: ', res);
+    const res = await axios.post(`${baseUrl}/recipes/add`, {
+      title: 'Iskender',
+      description: 'I am eating this tomorrow!',
+      creator: 'me',
+    });
+    console.log('response: ', res);
   } catch (error) {
     console.error('Error adding recipe: ', error);
   }

@@ -7,10 +7,10 @@
             src="@/assets/logo/GoodPlatesLogo.svg"
             alt="goodplates logo"
             class="logo-img"
-          />
+          ></img>
           <h1 class="logoTitle">GoodPlates</h1>
         </div>
-        <div class="seperator"></div>
+        <div class="seperator" />
       </div>
     </div>
     <div style="flex: 1">

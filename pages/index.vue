@@ -7,8 +7,8 @@
     />
     <Carousel
       :items="popularRecipes"
-      carouselLabel="Popular this week"
-      emptyLabel="There doesn't seem to be anything here..."
+      carousel-label="Popular this week"
+      empty-label="There doesn't seem to be anything here..."
     />
   </div>
 </template>

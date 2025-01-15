@@ -21,6 +21,24 @@
     ], // Allow empty lines between content in multiline Vue elements
     "@typescript-eslint/no-explicit-any": "warn", // Warn on usage of 'any' type
     "@typescript-eslint/no-unused-vars": "warn", // Warn on unused variables
-    "@typescript-eslint/explicit-module-boundary-types": "off" // Turn off explicit return types in functions (optional)
-  }
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Turn off explicit return types in functions (optional)
+    "comma-dangle": ["error", "always-multiline"],
+    "vue/multi-word-component-names": "off",
+    "space-before-function-paren": "off"
+  },
+  "vue/attribute-order": [
+    "warn",
+    {
+      "order": [
+        "GLOBAL_ATTRIBUTES",
+        "LIST_RENDERING",
+        "CONDITIONALS",
+        "DEFINITION",
+        "RENDER_MODIFIERS",
+        "CONTENT",
+        "EVENTS",
+        "OTHER_ATTR"
+      ]
+    }
+  ]
 }

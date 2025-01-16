@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Label>Creating new recipe</Label>
+    <recipe-form></recipe-form>
   </div>
 </template>
 

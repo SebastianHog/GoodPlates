@@ -3,7 +3,7 @@
     <NuxtLink to="/create_recipe">
       <MF-Button size="s" class="add-recipe-btn">Add Recipe</MF-Button>
     </NuxtLink>
-    <UserIcon />
+    <user-icon />
   </header>
 </template>
 

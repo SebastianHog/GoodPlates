@@ -1,18 +1,33 @@
 <template>
+<<<<<<< HEAD
   <div class="carousel" ref="carousel">
     <button @click="carouselLeft()">&#11164;</button>
     <div v-if="items" class="carousel-items-container">
       <Card v-for="item in items" :item="item" :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
         :key="item.post_id" />
+=======
+  <div class="carousel-container">
+    <h1 class="carousel-label">{{ carouselLabel }}</h1>
+    <div class="carousel" ref="carousel">
+      <button @click="carouselLeft()">&#11164;</button>
+      <div v-if="items" class="carousel-items-container">
+        <Card
+          v-for="item in items"
+          :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
+          :item="item"
+          :key="item.post_id"
+        />
+      </div>
+      <Label v-else :centered="true">{{ emptyLabel }} </Label>
+      <button @click="carouselRight()">&#11166;</button>
+>>>>>>> create-recipe
     </div>
-    <Label v-else :centered="true">{{ label }} </Label>
-    <button @click="carouselRight()">&#11166;</button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IRecipe } from '~/types/recipe';
+import { IRecipe } from '../../types/recipe';
 
 export default defineComponent({
   props: {
@@ -20,9 +35,15 @@ export default defineComponent({
       type: Array as () => IRecipe[],
       required: true,
     },
-    label: {
+    emptyLabel: {
       type: String,
       required: false,
+      default: 'There is nothing here...',
+    },
+    carouselLabel: {
+      type: String,
+      required: false,
+      default: '',
     },
   },
   data() {
@@ -44,11 +65,8 @@ export default defineComponent({
         this.currentIndex -= this.scrollSpeed;
       }
     },
-    handleClick() {
-      console.log('emit success');
-    },
   },
 });
 </script>
 
-<style lang="scss" src="./styles.scss"></style>
+<style scoped lang="scss" src="./styles.scss"></style>

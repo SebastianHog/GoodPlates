@@ -11,20 +11,27 @@ button {
   }
 }
 
-.carousel {
+.carousel-container {
   margin-left: 2rem;
-  width: 80vw;
+  .carousel-label {
+    margin-left: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+  }
+}
+.carousel {
   height: 26.625rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   overflow: hidden;
-  gap: 1rem;
+  gap: $gap-sm;
   padding-left: 0.7rem;
   padding: 1rem 0;
   .carousel-items-container {
     display: flex;
-    gap: 1rem;
+    gap: $gap-sm;
     width: 100%;
   }
 }

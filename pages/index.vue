@@ -1,7 +1,15 @@
 <template>
   <div class="carousels-container">
-    <button @click="handleAddRecipe">Add recipe</button>
-    <Carousel :items="freshRecipes" label="There are no recent uploads" />
+    <Carousel
+      :items="freshRecipes"
+      empty-label="There are no recent uploads"
+      carousel-label="Fresh!"
+    />
+    <Carousel
+      :items="popularRecipes"
+      carousel-label="Popular this week"
+      empty-label="There doesn't seem to be anything here..."
+    />
   </div>
 </template>
 
@@ -111,16 +119,16 @@ export default {
     async handleAddRecipe() {
       try {
         const response = await addRecipe();
-        console.log('Added recipe', response)
+        console.log('Added recipe', response);
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .carousels-container {
   display: flex;
   flex-direction: column;

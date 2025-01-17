@@ -1,0 +1,48 @@
+@use '../../style/main.scss';
+
+.user-icon-base {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border: 1px solid black;
+  border-radius: 100%;
+  margin-right: 3rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 75%;
+  }
+}
+
+.user-options {
+  display: none;
+  width: 7rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  background: white;
+  border: black 1px solid;
+  z-index: 10;
+  right: 5rem;
+  top: 3rem;
+  flex-direction: column;
+
+  .user-dropdown-option {
+    all: unset;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 0.2rem;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.user-icon-base:hover + .user-options,
+.user-options:hover {
+  display: flex;
+}

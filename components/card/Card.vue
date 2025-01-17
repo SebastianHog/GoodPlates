@@ -15,9 +15,9 @@
     <div class="recipe-info">
       <h2>
         Written by
-        <NuxtLink :to="`user/${item.author}`" class="user-link">{{
-          item.author
-        }}</NuxtLink>
+        <NuxtLink :to="`user/${item.author}`" class="user-link">
+          {{ item.author }}
+        </NuxtLink>
       </h2>
       <h2>43 people have cooked this</h2>
       <h2>93% of them cooked it again</h2>
@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IRecipe } from '~/types/recipe';
+import { IRecipe } from '../../types/recipe';
 
 export default defineComponent({
   props: {
@@ -58,4 +58,4 @@ export default defineComponent({
 });
 </script>
 
-<style src="./styles.scss" lang="ts"></style>
+<style scoped src="./styles.scss" lang="ts"></style>

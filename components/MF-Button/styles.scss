@@ -1,0 +1,54 @@
+@use '../../style/main.scss';
+@use '../../style/variables' as *;
+
+.xs {
+  width: 3rem;
+  height: 1rem;
+  font-size: 0.5rem;
+}
+.s {
+  width: 5rem;
+  height: 2rem;
+  font-size: 0.8rem;
+}
+
+.m {
+  width: 7rem;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+
+.l {
+  width: 10rem;
+  height: 5rem;
+  font-size: $font-size-m;
+}
+
+.xl {
+  width: 13rem;
+  height: 7rem;
+  font-size: $font-size-xl;
+}
+
+.font-xs {
+  font-size: 0.5rem;
+}
+.font-s {
+  font-size: 0.8rem;
+}
+
+.font-m {
+  font-size: 1.2rem;
+}
+
+.font-l {
+  font-size: 1.7rem;
+}
+
+.font-xl {
+  font-size: $font-size-xl;
+}
+
+button {
+  border: none;
+}

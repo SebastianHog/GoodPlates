@@ -1,6 +1,6 @@
 <template>
   <h1 class="label" :style="centered ? 'text-align: center' : ''">
-    <slot></slot>
+    <slot />
   </h1>
 </template>
 
@@ -17,7 +17,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .label {
   width: 100%;
   text-decoration: underline;

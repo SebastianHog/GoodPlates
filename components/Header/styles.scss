@@ -1,0 +1,15 @@
+.header-main {
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+
+  .add-recipe-btn {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    cursor: pointer;
+  }
+}

@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IRecipe } from '~/types/recipe';
+import { IRecipe } from '../../types/recipe';
 
 export default defineComponent({
   props: {

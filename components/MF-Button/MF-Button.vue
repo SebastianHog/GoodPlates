@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Isize, IButtonFontSize } from './buttonType';
+import { Isize, IButtonFontSize } from './buttonTypes';
 
 export default defineComponent({
   props: {

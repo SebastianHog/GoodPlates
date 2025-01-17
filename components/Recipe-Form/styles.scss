@@ -1,0 +1,21 @@
+@use '../../style/main.scss' as *;
+
+section {
+  padding: 2rem 0 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-sm;
+
+  textarea {
+    height: 10rem;
+    width: 50rem;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1.15rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: $primary_text_color;
+    padding: 0.7rem 0 0 0.7rem;
+    border-radius: $border-rad-sm;
+  }
+}

@@ -21,12 +21,14 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@use '../style/main.scss' as *;
+
 .button-display {
   width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: $gap-sm;
   border: 0.2rem solid white;
   padding: 1rem;
   margin: 1rem;

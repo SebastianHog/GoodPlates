@@ -3,7 +3,7 @@
     <Carousel
       :items="freshRecipes"
       empty-label="There are no recent uploads"
-      carousel-label="Fresh out of the oven"
+      carousel-label="Fresh!"
     />
     <Carousel
       :items="popularRecipes"

@@ -1,16 +1,19 @@
 <template>
-  <div style="display: inline;">
+  <div style="display: inline">
     <Label>{{ inputLabel }}</Label>
     <input
+      v-model="text"
       type="text"
       class="input"
       :maxlength="maxlength"
       :placeholder="placeholder"
-    >
+      :class="expandOnType && 'expand-class'"
+      @input="$emit('changes', text)"
+    />
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -30,9 +33,18 @@ export default defineComponent({
       required: false,
       default: '',
     },
+    expandOnType: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+  },
+  data(): { text: string } {
+    return {
+      text: '',
+    };
   },
 });
-
 </script>
 
-<style src='./styles.scss' lang='scss'></style>
+<style src="./styles.scss" lang="scss"></style>

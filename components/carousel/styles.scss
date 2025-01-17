@@ -1,4 +1,5 @@
 @forward '../../style/main.scss';
+@use '../../style/main.scss' as *;
 
 button {
   all: unset;
@@ -25,12 +26,12 @@ button {
   display: flex;
   align-items: center;
   overflow: hidden;
-  gap: 1rem;
+  gap: $gap-sm;
   padding-left: 0.7rem;
   padding: 1rem 0;
   .carousel-items-container {
     display: flex;
-    gap: 1rem;
+    gap: $gap-sm;
     width: 100%;
   }
 }

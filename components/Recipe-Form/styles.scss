@@ -2,20 +2,49 @@
 
 section {
   padding: 2rem 0 0 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: $gap-sm;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $gap-l;
 
-  textarea {
-    height: 10rem;
-    width: 50rem;
-    resize: none;
-    border: none;
-    outline: none;
-    font-size: 1.15rem;
-    background: rgba(0, 0, 0, 0.2);
-    color: $primary_text_color;
-    padding: 0.7rem 0 0 0.7rem;
-    border-radius: $border-rad-sm;
+  .add-info {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    .title-input {
+      * {
+        font-size: $font-size-xl;
+      }
+    }
+
+    textarea {
+      height: 10rem;
+      width: 50rem;
+      resize: none;
+      border: none;
+      outline: none;
+      font-size: 1.15rem;
+      background: rgba(0, 0, 0, 0.2);
+      color: $primary_text_color;
+      padding: 0.7rem 0 0 0.7rem;
+      border-radius: $border-rad-sm;
+    }
   }
+
+  .add-img {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    .image-title {
+      text-decoration: none !important;
+      font-size: $font-size-s;
+    }
+    .img-link-input {
+      font-size: 0.4rem;
+    }
+  }
+}
+
+.add-category-title {
+  font-weight: 700;
+  text-decoration: none !important;
 }

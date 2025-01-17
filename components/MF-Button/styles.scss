@@ -1,4 +1,5 @@
 @use '../../style/main.scss';
+@use '../../style/variables' as *;
 
 .xs {
   width: 3rem;
@@ -20,13 +21,13 @@
 .l {
   width: 10rem;
   height: 5rem;
-  font-size: 1.7rem;
+  font-size: $font-size-m;
 }
 
 .xl {
   width: 13rem;
   height: 7rem;
-  font-size: 2.1rem;
+  font-size: $font-size-xl;
 }
 
 .font-xs {
@@ -45,7 +46,7 @@
 }
 
 .font-xl {
-  font-size: 2.1rem;
+  font-size: $font-size-xl;
 }
 
 button {

@@ -1,0 +1,14 @@
+@use '../../style/main.scss' as *;
+
+.image-title {
+  text-decoration: none !important;
+  font-size: $font-size-s;
+}
+.img-link-input {
+  font-size: 0.4rem;
+}
+
+.thumbnail-preview {
+  width: 30rem;
+  margin-top: 2rem;
+}

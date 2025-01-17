@@ -12,6 +12,7 @@ export const addRecipe = async (recipePost: Partial<IRecipe>) => {
     const res = await axios.post(`${baseUrl}api/recipes/add`, {
       title: recipePost.title,
       description: recipePost.description,
+      thumbnail: recipePost.thumbnail,
       creator: 'From UI',
     });
     console.log('response: ', res.status, res.statusText);

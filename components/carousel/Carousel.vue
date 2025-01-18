@@ -1,11 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div class="carousel" ref="carousel">
-    <button @click="carouselLeft()">&#11164;</button>
-    <div v-if="items" class="carousel-items-container">
-      <Card v-for="item in items" :item="item" :style="{ transform: `translateX(-${currentIndex * 102}%)` }"
-        :key="item.post_id" />
-=======
   <div class="carousel-container">
     <h1 class="carousel-label">{{ carouselLabel }}</h1>
     <div class="carousel" ref="carousel">
@@ -18,9 +11,8 @@
           :key="item.post_id"
         />
       </div>
-      <Label v-else :centered="true">{{ emptyLabel }} </Label>
+      <Label v-else :centered="true">{{ emptyLabel }}</Label>
       <button @click="carouselRight()">&#11166;</button>
->>>>>>> create-recipe
     </div>
   </div>
 </template>

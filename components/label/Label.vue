@@ -1,6 +1,6 @@
 <template>
   <h1 class="label" :style="centered ? 'text-align: center' : ''">
-    <slot />
+    <slot></slot>
   </h1>
 </template>
 

@@ -1,5 +1,9 @@
 <template>
-  <h1 class="label" :style="centered ? 'text-align: center' : ''">
+  <h1
+    class="label"
+    :class="classes"
+    :style="centered ? 'text-align: center' : ''"
+  >
     <slot></slot>
   </h1>
 </template>
@@ -12,6 +16,11 @@ export default defineComponent({
     centered: {
       type: Boolean,
       required: false,
+    },
+    classes: {
+      type: String,
+      required: false,
+      default: '',
     },
   },
 });

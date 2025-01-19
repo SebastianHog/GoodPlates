@@ -1,10 +1,10 @@
 <template>
   <div class="button-display">
-    <MF-Button size="xs" @clicked="logger">X-Small</MF-Button>
-    <MF-Button size="s">Small</MF-Button>
-    <MF-Button size="m">Medium</MF-Button>
-    <MF-Button size="l">Large</MF-Button>
-    <MF-Button size="xl">Extra Large</MF-Button>
+    <MF-Button size="xs" @clicked="logger">xs</MF-Button>
+    <MF-Button size="s">s</MF-Button>
+    <MF-Button size="m">m</MF-Button>
+    <MF-Button size="l">l</MF-Button>
+    <MF-Button size="xl">xl</MF-Button>
   </div>
 </template>
 

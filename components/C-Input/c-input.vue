@@ -4,10 +4,10 @@
     <input
       v-model="text"
       type="text"
-      class="input"
+      class="cinput"
       :maxlength="maxlength"
       :placeholder="placeholder"
-      :class="expandOnType && 'expand-class'"
+      :class="[expandOnType && 'expand-class', classes]"
       @input="$emit('changes', text)"
     />
   </div>
@@ -37,6 +37,11 @@ export default defineComponent({
       type: Boolean,
       required: false,
       default: false,
+    },
+    classes: {
+      type: String,
+      required: false,
+      default: '',
     },
   },
   data(): { text: string } {

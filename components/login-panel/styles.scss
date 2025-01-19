@@ -1,0 +1,26 @@
+.login-form-container {
+  border: 1px solid black;
+  width: 50vw;
+  height: 70vh;
+  margin-bottom: 10rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .login-column {
+    .email-section {
+      .login-label {
+        text-decoration: none;
+        margin-bottom: 0.4rem;
+      }
+      .email-input {
+        width: 25rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .login-input {
+    width: 25rem;
+  }
+}

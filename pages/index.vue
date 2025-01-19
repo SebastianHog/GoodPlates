@@ -14,24 +14,25 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import { IRecipe } from '~/types/recipe';
 import { getAllRecipes } from '~/utils/api/getRecipes';
 
-export default {
-  data(): { freshipies: IRecipe[] } {
+export default defineComponent({
+  data() {
     return {
-      freshipies: [],
+      freshipies: [] as IRecipe[],
     };
   },
   async created() {
     try {
-      console.log('Fetching recipes...');
-      this.freshipies = await getAllRecipes();
+      const rec = await getAllRecipes();
+      this.freshipies = rec;
     } catch (error) {
       console.error('Error fetching recipes:', error);
     }
   },
-};
+});
 </script>
 
 <style scoped lang="scss">

@@ -27,8 +27,11 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@use '../../style/variables' as *;
+
 .label {
   width: 100%;
   text-decoration: underline;
+  color: $font-size-m;
 }
 </style>

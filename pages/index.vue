@@ -1,12 +1,12 @@
 <template>
   <div class="carousels-container">
     <Carousel
-      :items="freshipies.length > 1 && freshipies"
+      :items="freshipies && freshipies"
       empty-label="There are no recent uploads"
       carousel-label="Fresh!"
     />
     <Carousel
-      :items="freshipies.length > 1 && freshipies"
+      :items="freshipies && freshipies"
       carousel-label="Popular this week"
       empty-label="There doesn't seem to be anything here..."
     />

@@ -25,7 +25,7 @@ export default defineComponent({
   props: {
     items: {
       type: Array as () => IRecipe[],
-      required: true,
+      required: false,
     },
     emptyLabel: {
       type: String,
@@ -46,13 +46,11 @@ export default defineComponent({
   },
   methods: {
     carouselRight() {
-      console.log('right');
-      if (this.currentIndex < this.items.length - 2) {
+      if (this.currentIndex < this.items!.length - 3) {
         this.currentIndex += this.scrollSpeed;
       }
     },
     carouselLeft() {
-      console.log('left');
       if (this.currentIndex > 0) {
         this.currentIndex -= this.scrollSpeed;
       }

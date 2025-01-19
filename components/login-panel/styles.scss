@@ -1,3 +1,6 @@
+@use '../../style/main';
+@use '../../style/variables' as *;
+
 .login-form-container {
   border: 1px solid black;
   width: 50vw;
@@ -8,15 +11,28 @@
   grid-template-columns: repeat(2, 1fr);
 
   .login-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    .login-label {
+      text-decoration: none;
+    }
+    .email-input-label {
+      font-size: $font-size-s;
+      text-decoration: none;
+      font-weight: 600;
+    }
     .email-section {
-      .login-label {
-        text-decoration: none;
-        margin-bottom: 0.4rem;
-      }
       .email-input {
         width: 25rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        font-size: $font-size-m;
       }
+    }
+    .invalid-credentials {
+      color: $text-error-color;
+      font-weight: bold;
     }
   }
 

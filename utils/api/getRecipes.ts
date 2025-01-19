@@ -9,7 +9,6 @@ export const getAllRecipes = async () => {
       recipeRequest: 'all',
     },
   });
-  console.log(data.data.recipes);
   const allRecipes = data.data.recipes;
   return allRecipes;
 };

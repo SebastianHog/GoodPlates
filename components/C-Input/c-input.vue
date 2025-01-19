@@ -3,7 +3,7 @@
     <Label>{{ inputLabel }}</Label>
     <input
       v-model="text"
-      type="text"
+      :type="inputType"
       class="cinput"
       :maxlength="maxlength"
       :placeholder="placeholder"
@@ -18,6 +18,11 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
+    inputType: {
+      type: String,
+      required: false,
+      default: 'text',
+    },
     maxlength: {
       type: Number,
       required: false,
@@ -39,7 +44,7 @@ export default defineComponent({
       default: false,
     },
     classes: {
-      type: String,
+      type: [String, Array],
       required: false,
       default: '',
     },

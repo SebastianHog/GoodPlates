@@ -1,6 +1,7 @@
 {
   "extends": ["@nuxtjs/eslint-config-typescript"],
   "rules": {
+    "vue/require-default-prop ": false,
     "@typescript-eslint/no-require-imports": "warn",
     "vue/attributes-order": [
       "warn",

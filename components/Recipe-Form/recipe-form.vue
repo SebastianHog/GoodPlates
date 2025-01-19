@@ -18,33 +18,6 @@
     <div>
       <image-input @newLink="updateThumbnail"></image-input>
     </div>
-    <!-- <div class="add-img">
-      <Label class="add-category-title">Add images!</Label>
-      <div>
-        <Label class="image-title">Thumbnail image</Label>
-        <c-input
-          class="img-link-input"
-          :maxlength="250"
-          :expand-on-type="true"
-        ></c-input>
-      </div>
-      <div>
-        <Label class="image-title">Second image</Label>
-        <c-input
-          class="img-link-input"
-          :maxlength="250"
-          :expand-on-type="true"
-        ></c-input>
-      </div>
-      <div>
-        <Label class="image-title">Third image</Label>
-        <c-input
-          class="img-link-input"
-          :maxlength="250"
-          :expand-on-type="true"
-        ></c-input>
-      </div>
-    </div> -->
   </section>
 </template>
 
@@ -52,20 +25,21 @@
 import { defineComponent } from 'vue';
 import { addRecipe } from '../../utils/api/addRecipes';
 
-type dataTypes = {
-  recipeTitle: string;
-  recipeDescription: string;
-  recipeThumbnail: string;
-};
-
 export default defineComponent({
   props: {},
-  data(): dataTypes {
+  data() {
     return {
-      recipeTitle: '',
-      recipeDescription: '',
-      recipeThumbnail: '',
+      recipeTitle: '' as string,
+      recipeDescription: '' as string,
+      recipeThumbnail: '' as string,
+      creator: '' as string,
     };
+  },
+  async created() {
+    this.creator = await this.$store
+      .dispatch('fetchUser')
+      .then((user) => user.username);
+    console.log(this.creator);
   },
   methods: {
     updateTitle(text: string) {
@@ -74,11 +48,12 @@ export default defineComponent({
     updateThumbnail(link: string) {
       this.recipeThumbnail = link;
     },
-    postRecipe() {
+    async postRecipe() {
       const recipe = {
         title: this.recipeTitle,
         description: this.recipeDescription,
         thumbnail: this.recipeThumbnail,
+        creator: this.creator,
       };
       addRecipe(recipe);
     },

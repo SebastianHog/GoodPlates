@@ -13,7 +13,7 @@ export const addRecipe = async (recipePost: Partial<IRecipe>) => {
       title: recipePost.title,
       description: recipePost.description,
       thumbnail: recipePost.thumbnail,
-      creator: 'From UI',
+      creator: recipePost.creator,
     });
     console.log('response: ', res.status, res.statusText);
   } catch (error) {

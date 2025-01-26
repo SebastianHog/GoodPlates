@@ -4,6 +4,7 @@ const baseUrl = process.env.BASE_URL;
 
 export const state = () => ({
   user: {},
+  currentPage: 'home',
 });
 
 export const mutations = {
@@ -12,6 +13,9 @@ export const mutations = {
   },
   CLEAR_USER(state) {
     state.user = {};
+  },
+  SET_CURRENT_PAGE(state, page) {
+    state.currentPage = page;
   },
 };
 
@@ -26,5 +30,9 @@ export const actions = {
     } catch (error) {
       console.error('Failed to fetch user:', error);
     }
+  },
+  setCurrentPage({ commit }, page) {
+    commit('SET_CURRENT_PAGE', page);
+    console.log('Current page:', page);
   },
 };

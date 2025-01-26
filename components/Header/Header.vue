@@ -1,25 +1,49 @@
 <template>
   <header class="header-main">
-    <NuxtLink to="/" class="logoTitleImage">
-      <img
-        src="@/assets/logo/GoodPlatesLogo.svg"
-        alt="goodplates logo"
-        style="width: 4rem"
-      />
-    </NuxtLink>
-    <NuxtLink to="/create_recipe">
-      <MF-Button size="s" button-font-size="s" class="add-recipe-btn">
-        Add Recipe
-      </MF-Button>
-    </NuxtLink>
-    <h1 v-if="user">{{ user.username }}</h1>
+    <div class="left-header">
+      <NuxtLink to="/">
+        <img
+          src="../../assets/logo/GoodPlatesLogo.svg"
+          alt="Go to 'home'"
+          class="header-logo"
+        />
+      </NuxtLink>
 
-    <!-- <NuxtLink v-if="!user.username" to="/login">
-      <MF-Button size="s" button-font-size="s" class="add-recipe-btn">
-        Login
-      </MF-Button>
-    </NuxtLink> -->
-    <user-icon />
+      <div id="navigation" class="header-navigation">
+        <h1 @click="handleNavigation('/')" id="/">HOME</h1>
+        <h1 @click="handleNavigation('/recommended')" id="/recommended">
+          RECOMMENDED
+        </h1>
+        <h1 @click="handleNavigation('/following')" id="/following">
+          FOLLOWING
+        </h1>
+        <h1 @click="handleNavigation('/saved')" id="/saved">SAVED</h1>
+      </div>
+    </div>
+
+    <div class="right-header">
+      <div class="searchbar">
+        <img
+          src="../../assets/icons/search_icon.svg"
+          alt="search-icon"
+          class="search-icon"
+        />
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Pancakes with strawberry jam..."
+        />
+      </div>
+      <div id="header_user" class="header-user-info">
+        <h1 v-if="user.username">{{ user.username }}</h1>
+        <!-- <img :src="user.userIcon" alt=""> -->
+        <img
+          src="../../assets/icons/user-icon.svg"
+          alt="user-profile-picture"
+          class="user-icon"
+        />
+      </div>
+    </div>
   </header>
 </template>
 
@@ -40,6 +64,18 @@ export default defineComponent({
     } catch (error) {
       console.error('Error during user fetch:', error);
     }
+  },
+  methods: {
+    handleNavigation(path: string) {
+      this.$store.dispatch('setCurrentPage', path);
+
+      const allPaths = document.querySelectorAll('.header-navigation h1');
+      allPaths.forEach((path) => path.classList.remove('active'));
+
+      const newPath = document.getElementById(path);
+      newPath?.classList.add('active');
+      this.$router.push(path);
+    },
   },
 });
 </script>

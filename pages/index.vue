@@ -1,16 +1,5 @@
 <template>
-  <div class="carousels-container">
-    <Carousel
-      :items="freshipies && freshipies"
-      empty-label="There are no recent uploads"
-      carousel-label="Fresh!"
-    />
-    <Carousel
-      :items="freshipies && freshipies"
-      carousel-label="Popular this week"
-      empty-label="There doesn't seem to be anything here..."
-    />
-  </div>
+  <div class="carousels-container"></div>
 </template>
 
 <script lang="ts">

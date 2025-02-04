@@ -1,5 +1,7 @@
 @forward './_variables.scss';
+@forward './functions.scss';
 @use './_variables.scss' as *;
+@use './functions.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
@@ -8,7 +10,6 @@
   box-sizing: border-box;
   font-family: 'Inter';
   font-weight: 400;
-  // overflow-x: hidden;
 }
 
 body {

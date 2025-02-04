@@ -29,6 +29,9 @@ export const actions = {
       return response.data.User;
     } catch (error) {
       console.error('Failed to fetch user:', error);
+      return {
+        username: 'Username',
+      };
     }
   },
   setCurrentPage({ commit }, page) {

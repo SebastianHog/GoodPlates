@@ -1,5 +1,7 @@
 <template>
-  <div class="carousels-container"></div>
+  <lineup>
+    <Card v-for="post in freshipies" :key="post.post_id" :post="post" />
+  </lineup>
 </template>
 
 <script lang="ts">

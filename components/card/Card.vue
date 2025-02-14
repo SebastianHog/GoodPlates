@@ -1,5 +1,5 @@
 <template>
-  <section class="card-wrapper">
+  <nuxt-link :to="`/recipe/${post._id}`" class="card-wrapper">
     <div class="card-image-section">
       <img :src="post.thumbnail" alt="recipe-thumbnail" class="card-image" />
     </div>
@@ -19,7 +19,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </nuxt-link>
 </template>
 
 <script lang="ts">
@@ -32,6 +32,9 @@ export default defineComponent({
       type: Object as PropType<IRecipe>,
       required: true,
     },
+  },
+  mounted() {
+    console.log(this.post);
   },
 });
 </script>

@@ -3,5 +3,5 @@ export type IRecipe = {
   creator: string; // make this into user when user type is made
   description?: string;
   thumbnail?: string;
-  post_id: string;
+  _id: string;
 };

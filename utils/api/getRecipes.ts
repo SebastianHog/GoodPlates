@@ -13,8 +13,15 @@ export const getAllRecipes = async () => {
   return allRecipes;
 };
 
-export const getOneRecipe = (id: string) => {
-  // return recipe;
+export const getOneRecipe = async (id: string) => {
+  const data = await axios.get(`${baseUrl}api/recipes/get`, {
+    params: {
+      recipeRequest: 'by_id',
+      recipeId: id,
+    },
+  });
+  const recipe = data.data.recipe;
+  return recipe;
 };
 
 export const getRandomRecipe = () => {

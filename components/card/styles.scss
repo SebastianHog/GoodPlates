@@ -2,6 +2,7 @@
 @use '../../style/main.scss' as *;
 
 .card-wrapper {
+  all: unset;
   width: toRem(256);
   height: toRem(282);
   border: none;
@@ -11,6 +12,7 @@
   border-radius: toRem(10);
   box-shadow: toRem(3) toRem(4) toRem(10) black;
   overflow: hidden;
+  cursor: pointer;
 
   .card-image-section {
     height: toRem(137);
@@ -41,6 +43,7 @@
         text-decoration: none;
         color: white;
         padding-bottom: toRem(3);
+        font-size: toRem(16);
 
         .author-link {
           color: $text_link_color;

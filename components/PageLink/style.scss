@@ -1,0 +1,7 @@
+@forward '../../style/main.scss';
+@use '../../style/main.scss' as *;
+
+.link-component-wrapper {
+  font-weight: bold;
+  color: $text-link-color;
+}

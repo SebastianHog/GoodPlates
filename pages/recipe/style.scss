@@ -1,0 +1,37 @@
+@forward '../../style/main.scss';
+@use '../../style/main.scss' as *;
+
+.recipe-page-wrapper {
+  margin: 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  margin-left: 6rem;
+
+  div {
+    overflow: hidden;
+    border-top-left-radius: toRem(10);
+    border-top-right-radius: toRem(10);
+    width: toRem(704);
+  }
+
+  .recipe-info-wrapper {
+    .recipe-page-thumbnail {
+      width: 100%;
+      height: toRem(395);
+      object-fit: cover;
+    }
+    .recipe-bio {
+      .recipe-title {
+        font-size: toRem(48);
+        font-weight: bolder;
+      }
+      .recipe-author {
+        font-weight: bold;
+        margin-bottom: toRem(16);
+      }
+      .recipe-page-description {
+      }
+    }
+  }
+}
